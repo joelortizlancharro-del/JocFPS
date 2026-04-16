@@ -1,0 +1,33 @@
+# ===== Unity generated folders =====
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+
+# ===== Visual Studio / VS Code =====
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Builds =====
+*.apk
+*.exe
+*.app
+
+# ===== Crash reports =====
+sysinfo.txt
