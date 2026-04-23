@@ -1,0 +1,24 @@
+@startuml
+
+start
+
+:Iniciar joc;
+:Carregar nivell;
+:Iniciar timer;
+
+while (temps > 0?) is (sí)
+  :Spawn enemics;
+  :Jugador dispara;
+  :Comprovar impactes;
+  :Actualitzar puntuació;
+endwhile (no)
+
+if (puntuació >= objectiu?) then (sí)
+  :Passar de nivell;
+else (no)
+  :Game Over;
+endif
+
+stop
+
+@enduml
