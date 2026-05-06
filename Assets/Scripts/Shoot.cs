@@ -6,11 +6,15 @@ public class Shoot : MonoBehaviour
     public Transform firePoint;
     public float force = 20f;
 
+    public float fireRate = 0.8f; // tiempo entre disparos
+    private float nextTimeToFire = 0f;
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.time >= nextTimeToFire)
         {
             ShootBullet();
+            nextTimeToFire = Time.time + fireRate;
         }
     }
 
@@ -19,7 +23,7 @@ public class Shoot : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.AddForce(firePoint.forward * force, ForceMode.Impulse);
+        rb.linearVelocity = firePoint.forward * force;
 
         Debug.Log("Disparo realizado");
     }
