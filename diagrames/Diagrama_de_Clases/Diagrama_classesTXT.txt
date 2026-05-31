@@ -1,0 +1,57 @@
+@startuml
+
+class Player {
+  - health : int
+  - score : int
+  - weapon : Weapon
+  + shoot() : void
+}
+
+class EnemyTarget {
+  - points : int
+  - isActive : boolean
+  + hit() : void
+  + respawn() : void
+}
+
+class Item {
+  - type : String
+  + applyEffect() : void
+}
+
+class Weapon {
+  - damage : int
+  - fireRate : float
+  + fire() : void
+}
+
+class GameManager {
+  - currentLevel : int
+  - timeLeft : int
+  + startGame() : void
+  + updateGame() : void
+  + endGame() : void
+}
+
+class Level {
+  - levelNumber : int
+  - requiredScore : int
+  + startLevel() : void
+  + checkWin() : boolean
+}
+
+class Timer {
+  - timeRemaining : int
+  + start() : void
+  + update() : void
+}
+
+Player --> Weapon
+Player --> Item
+Player --> EnemyTarget
+GameManager --> Player
+GameManager --> Level
+GameManager --> Timer
+Level --> EnemyTarget
+
+@enduml

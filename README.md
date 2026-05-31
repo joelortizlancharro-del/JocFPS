@@ -1,46 +1,70 @@
 # FPS Target Shooter
 
-## Descripción
-FPS (First Person Shooter) en el que el jugador debe disparar a distintos objetivos dentro de un tiempo límite.  
-Para avanzar, deberá alcanzar una puntuación mínima antes de que el tiempo termine.
+## Descripció
+FPS en primera persona en el qual el jugador ha de disparar a dianes dins d’un temps límit.
 
-## Características
-- Sistema de disparo en primera persona
-- Tiempo límite por nivel
-- Objetivos dinámicos
-- Sistema de puntuación
-- Desbloqueo de niveles
-- Dificultad progresiva
+L’objectiu és aconseguir la puntuació necessària abans que el temps s’acabi per guanyar la partida o completar el nivell.
 
-## Niveles
+El jugador es pot moure lliurement, apuntar amb el ratolí i disparar projectils físics que interactuen amb els objectius.
 
-### Nivel 1
-- Introducción al juego
-- Objetivos lentos
-- Puntuación mínima baja
+---
 
-### Nivel 2
-- Mayor dificultad
-- Objetivos más rápidos
-- Menor tiempo disponible
+## Característiques
+- Moviment en primera persona (WASD)
+- Càmera controlada amb el ratolí
+- Sistema de disparo amb projectils físics
+- Sistema de puntuació
+- Temporitzador per nivell
+- Sistema de victòria i derrota
+- Menú principal i selecció de nivells
+- Sistema de nivells funcional
 
-### Nivel 3
-- Máxima dificultad
-- Objetivos impredecibles
-- Requiere alta precisión
+---
 
-## Cómo jugar
-1. Apuntar con el cursor
-2. Disparar a los objetivos
-3. Sumar puntos por cada acierto
-4. Alcanzar la puntuación requerida antes de que el tiempo termine
+## Nivells
 
-## Objetivo
-Superar los tres niveles consiguiendo la puntuación necesaria en cada uno dentro del tiempo límite.
+### Nivell 1
+- Mateixa dificultat que la resta
+- Introducció a l’entorn del joc
+- Objectius distribuïts pel mapa
+- Puntuació necessària per guanyar
 
-## Tecnologías
-- Lenguaje: Java
-- Plataforma: PC
+### Nivell 2
+- Mateix sistema de dificultat
+- Mateixa mecànica de joc
+- Canvi d’escenari / nivell
 
-## Estado del proyecto
-En desarrollo
+### Nivell 3
+- Mateix sistema de dificultat
+- Últim nivell del joc
+- Mateixa mecànica de puntuació i temps
+
+---
+
+## Com jugar
+1. Moure’s amb WASD  
+2. Mirar amb el ratolí  
+3. Disparar amb clic esquerre  
+4. Encertar les dianes per sumar punts  
+5. Arribar a la puntuació abans que s’acabi el temps  
+6. Guanyar si s’arriba a l’objectiu  
+7. Perdre si el temps arriba a 0  
+
+---
+
+## Objectiu
+Completar els tres nivells aconseguint la puntuació necessària dins del temps límit.
+
+---
+
+## Tecnologies
+- Motor: Unity  
+- Llenguatge: C#  
+- UI: TextMeshPro  
+- Sistema de físiques: Rigidbody + Colliders  
+
+---
+
+## Estat del projecte i gameplay
+Projecte finalitzat i funcional (versió entregable), gameplay: https://drive.google.com/file/d/1klUyOkBADRV_sgGxbLtcLY3Mho7qpngR/view?usp=sharing
+
