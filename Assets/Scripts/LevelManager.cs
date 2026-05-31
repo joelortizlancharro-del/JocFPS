@@ -5,6 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     public void LoadLevel1()
     {
+        Debug.Log("Botón pulsado");
         SceneManager.LoadScene("Level1");
     }
 
