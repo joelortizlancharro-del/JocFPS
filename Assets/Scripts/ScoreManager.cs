@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -9,10 +10,17 @@ public class ScoreManager : MonoBehaviour
 
     public TextMeshProUGUI scoreText;
 
-    void Awake()
+    public int pointsToWin = 3;
+void Awake()
+{
+    if (instance != null && instance != this)
     {
-        instance = this;
+        Destroy(gameObject);
+        return;
     }
+
+    instance = this;
+}
 
     void Start()
     {
@@ -22,7 +30,20 @@ public class ScoreManager : MonoBehaviour
     public void AddPoint()
     {
         score++;
+
         UpdateScoreUI();
+
+        CheckWin();
+    }
+
+    void CheckWin()
+    {
+        if (score >= pointsToWin)
+        {
+            Debug.Log("HAS GANADO");
+
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     void UpdateScoreUI()
@@ -30,10 +51,6 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
         {
             scoreText.text = "Score: " + score;
-        }
-        else
-        {
-            Debug.LogWarning("ScoreText no asignado en el Inspector");
         }
     }
 }

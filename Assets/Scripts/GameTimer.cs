@@ -1,10 +1,11 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
     public float timeLeft = 60f;
+
     public TextMeshProUGUI timerText;
 
     private bool isRunning = true;
@@ -18,11 +19,23 @@ public class GameTimer : MonoBehaviour
         if (timeLeft <= 0)
         {
             timeLeft = 0;
+
             isRunning = false;
-            Debug.Log("Tiempo terminado");
+
+            LoseCondition();
         }
 
         UpdateTimerUI();
+    }
+
+    void LoseCondition()
+    {
+        if (ScoreManager.instance.score < 3)
+        {
+            Debug.Log("HAS PERDIDO");
+
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     void UpdateTimerUI()
@@ -31,7 +44,6 @@ public class GameTimer : MonoBehaviour
 
         timerText.text = "Time: " + seconds;
 
-        // 🎨 Cambio visual cuando queda poco tiempo
         if (seconds <= 10)
         {
             timerText.color = Color.red;
